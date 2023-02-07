@@ -7,6 +7,9 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+Login() {
+throw new Error('Method not implemented.');
+}
   title = 'Angular WaterPark';
   public menuOpen: boolean = false;
   
@@ -22,5 +25,6 @@ export class AppComponent implements OnInit{
       window.scrollTo(0, 0)
     });
   }
+
 }
 

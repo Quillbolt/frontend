@@ -4,6 +4,7 @@ import { CardComponent } from './card/card.component';
 import { HeroComponent } from './hero/hero.component';
 import { ImagecarouselComponent } from './imagecarousel/imagecarousel.component';
 import { ContentComponent } from './content/content.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +16,7 @@ import { ContentComponent } from './content/content.component';
     ContentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,RouterModule
   ],
   exports:[
     CardComponent,

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TicketComponent } from './ticket/ticket.component';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes : Routes = [
-  { path:'ticket',component:TicketComponent }
+  { path:'',component:TicketComponent }
 ]
 
 @NgModule({
@@ -12,7 +13,13 @@ const routes : Routes = [
     TicketComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    FormsModule
+  ],
+  exports: [
+    RouterModule
   ]
 })
 export class BookingModule { }

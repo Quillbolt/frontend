@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators,ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-ticket',
@@ -7,7 +7,9 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./ticket.component.css']
 })
 export class TicketComponent {
-  BookingForm;
+  BookingForm:FormGroup;
+  submitted = false;
+  loading=false;
   constructor(private FormBuilder:FormBuilder){
     this.BookingForm = this.FormBuilder.group({
       firstname: ['', [Validators.required, Validators.minLength(10)]],
@@ -19,7 +21,10 @@ export class TicketComponent {
 
     
   }
-  onsubmit(){
+  get f() { return this.BookingForm.controls; }
+  onSubmit(){
+    
     console.log.apply(this.BookingForm.value);
+    console.log('submitted')
     }
 }
