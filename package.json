@@ -4,9 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build:prod": "npm run tailwind:prod && ng build --prod",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
+    "tailwind:dev": "npx tailwindcss@2.0.0-alpha.11 build -c tailwindcss-config.js style.scss -o ./src/tailwind.css",
+    "tailwind:prod": "NODE_ENV=production npx tailwindcss@2.0.0-alpha.11 build -c tailwindcss-config.js style.scss -o ./src/tailwind.css"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +31,7 @@
     "@angular-devkit/build-angular": "^15.0.0",
     "@angular/cli": "~15.0.0",
     "@angular/compiler-cli": "^15.0.0",
+    "@tailwindcss/forms": "^0.5.3",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.13",
     "jasmine-core": "~4.5.0",
