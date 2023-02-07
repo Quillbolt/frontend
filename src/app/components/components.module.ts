@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { HeroComponent } from './hero/hero.component';
 import { ImagecarouselComponent } from './imagecarousel/imagecarousel.component';
+import { ContentComponent } from './content/content.component';
 
 
 
@@ -10,7 +11,8 @@ import { ImagecarouselComponent } from './imagecarousel/imagecarousel.component'
   declarations: [
     CardComponent,
     HeroComponent,
-    ImagecarouselComponent
+    ImagecarouselComponent,
+    ContentComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { ImagecarouselComponent } from './imagecarousel/imagecarousel.component'
   exports:[
     CardComponent,
     HeroComponent,
-    ImagecarouselComponent
+    ImagecarouselComponent,
+    ContentComponent
   ]
 })
 export class ComponentsModule { }
