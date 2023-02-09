@@ -1,30 +1,72 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators,ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-ticket',
   templateUrl: './ticket.component.html',
   styleUrls: ['./ticket.component.css']
 })
-export class TicketComponent {
-  BookingForm:FormGroup;
-  submitted = false;
-  loading=false;
-  constructor(private FormBuilder:FormBuilder){
-    this.BookingForm = this.FormBuilder.group({
-      firstname: ['', [Validators.required, Validators.minLength(10)]],
-      lastname: ['', [Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]],
-      email: ['', [Validators.required, Validators.email]],
-      Phone: ['', [Validators.required,Validators.pattern("/([\+84|84|0]+(3|5|7|8|9|1[2|6|8|9]))+([0-9]{8})\b/")]],
-      debitcard:['',[Validators.required]]
-    })
+export class TicketComponent implements OnInit {
+  
+  form: FormGroup = new FormGroup({
+    fullname: new FormControl(''),
+    username: new FormControl(''),
+    email: new FormControl(''),
+    phone: new FormControl(''),
 
-    
+    acceptTerms: new FormControl(false),
+  });
+  submitted = false;
+
+  ticketadult:number = 1;
+  ticketchildren:number = 0
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.form = this.formBuilder.group(
+      {
+        fullname: ['', Validators.required],
+        username: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(6),
+            Validators.maxLength(20)
+          ]
+        ],
+        email: ['', [Validators.required, Validators.email]],
+        password: [
+          '',
+          [
+            Validators.required,
+            Validators.minLength(6),
+            Validators.maxLength(40)
+          ]
+        ],
+
+        acceptTerms: [false, Validators.requiredTrue]
+      },
+    );
   }
-  get f() { return this.BookingForm.controls; }
-  onSubmit(){
-    
-    console.log.apply(this.BookingForm.value);
-    console.log('submitted')
+
+  get f(): { [key: string]: AbstractControl } {
+    return this.form.controls;
+  }
+
+  onSubmit(): void {
+    this.submitted = true;
+
+    if (this.form.invalid) {
+      return;
     }
+
+    console.log(JSON.stringify(this.form.value, null, 2));
+  }
+
+  onReset(): void {
+    this.submitted = false;
+    this.form.reset();
+  }
 }
+
+

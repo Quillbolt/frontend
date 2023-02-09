@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from "./components/components.module";
+import { GalleryComponent } from './gallery/gallery.component';
+import { DiningComponent } from './dining/dining.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        GalleryComponent,
+        DiningComponent,
+        AboutComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
