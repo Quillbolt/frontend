@@ -8,6 +8,7 @@ import { ComponentsModule } from "./components/components.module";
 import { GalleryComponent } from './gallery/gallery.component';
 import { DiningComponent } from './dining/dining.component';
 import { AboutComponent } from './about/about.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AboutComponent } from './about/about.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ComponentsModule
+        ComponentsModule,
+        ReactiveFormsModule
     ]
 })
 export class AppModule { }
