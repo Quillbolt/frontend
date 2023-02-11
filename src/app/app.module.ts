@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from "./components/components.module";
 import { GalleryComponent } from './gallery/gallery.component';
-import { DiningComponent } from './dining/dining.component';
 import { AboutComponent } from './about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -16,7 +15,6 @@ import { ReactiveFormsModule } from '@angular/forms';
         AppComponent,
         HomeComponent,
         GalleryComponent,
-        DiningComponent,
         AboutComponent
     ],
     providers: [],

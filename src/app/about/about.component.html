@@ -11,7 +11,7 @@
       </style>
       <div class="px-6 py-12 md:px-12">
         <div class="container mx-auto xl:px-32">
-          <div class="grid lg:grid-cols-2 flex items-center">
+          <div class="grid lg:grid-cols-2 items-center">
             <div class="md:mt-12 lg:mt-0 mb-12 lg:mb-0">
               <div 
                 class="block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14"
@@ -19,9 +19,10 @@
               >
               <h2 class="text-3xl font-bold mb-12">Contact us</h2>
               <form [formGroup]="contact_form" (ngSubmit)="onSubmit()">
-                <div class="form-group mb-6">
+                <div class="relative z-0 mb-6">
                   <input
                     type="text"
+                    
                     class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     id="exampleInput7"
                     placeholder="name"
