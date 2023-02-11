@@ -5,6 +5,7 @@ import { HeroComponent } from './hero/hero.component';
 import { ImagecarouselComponent } from './imagecarousel/imagecarousel.component';
 import { ContentComponent } from './content/content.component';
 import { RouterModule } from '@angular/router';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 
 
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
     CardComponent,
     HeroComponent,
     ImagecarouselComponent,
-    ContentComponent
+    ContentComponent,
+    TestimonialComponent
   ],
   imports: [
     CommonModule,RouterModule
@@ -22,7 +24,8 @@ import { RouterModule } from '@angular/router';
     CardComponent,
     HeroComponent,
     ImagecarouselComponent,
-    ContentComponent
+    ContentComponent,
+    TestimonialComponent
   ]
 })
 export class ComponentsModule { }

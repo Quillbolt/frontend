@@ -28,7 +28,7 @@
                     placeholder="name"
                     formControlName="name"
                   />
-                  <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                  <div *ngIf="submitted && f['name'].errors" class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium">
                     <div *ngIf="f['name'].errors['required']">Name is required</div>
                   </div>
                 </div>
@@ -41,7 +41,7 @@
                     formControlName="email"
                     [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
                   />
-                  <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                  <div *ngIf="submitted && f['email'].errors" class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium">
                     <div *ngIf="f['email'].errors['required']">Email is required</div>
                     <div *ngIf="f['email'].errors['email']">Email is invalid</div>
                   </div>

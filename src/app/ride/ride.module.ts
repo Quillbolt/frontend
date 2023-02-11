@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsModule } from '../components/components.module';
 import { RidesComponent } from './rides/rides.component';
+import { RideDetailComponent } from './ride-detail/ride-detail.component';
 
 const routes : Routes =[
   { path:'',component: HomeComponent },
@@ -13,7 +14,8 @@ const routes : Routes =[
 @NgModule({
   declarations: [
     HomeComponent,
-    RidesComponent
+    RidesComponent,
+    RideDetailComponent
   ],
   imports: [
     CommonModule,

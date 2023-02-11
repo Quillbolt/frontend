@@ -4,10 +4,12 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { ReserveComponent } from './reserve/reserve.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes : Routes = [
   { path:'',component:HomeComponent },
-  { path:'menu',component:MenuComponent}
+  { path:'menu',component:MenuComponent},
+  { path:'reserve',component:ReserveComponent},
 ]
 
 @NgModule({
@@ -19,6 +21,7 @@ const routes : Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    ReactiveFormsModule
   ],
   exports:[
     RouterModule
