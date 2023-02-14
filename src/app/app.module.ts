@@ -9,7 +9,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { AboutComponent } from './about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
+import {NgxPrintModule} from 'ngx-print';
 @NgModule({
     declarations: [
         AppComponent,
@@ -23,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         BrowserModule,
         AppRoutingModule,
         ComponentsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgxPrintModule
     ]
 })
 export class AppModule { }

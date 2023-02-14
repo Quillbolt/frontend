@@ -18,7 +18,8 @@ export class ReserveComponent implements OnInit {
     this.reserve_form = this.formbuilder.group({
       fName: ['', Validators.required],
       lastname: ['', Validators.required],
-      rdate: ['', Validators.required]
+      guest:['',Validators.required,Validators.min(2)],
+      rdate: ['', Validators.required],
     })
   }
   get f(): { [key: string]: AbstractControl } {

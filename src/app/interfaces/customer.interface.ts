@@ -1,6 +1,12 @@
 export interface Customer {
-    id : string;
-    name : string;
+    firstname:string;
+    lastname : string;
+    email: string;
     tel : string;
-
+    cardetail:{
+        cardnumber:string;
+        expirydate:Date;
+        CVC:string;
+    };
+    country:string;
 }

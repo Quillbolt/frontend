@@ -8,7 +8,7 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path:'' ,component:HomeComponent },
   { path:'gallery',component:GalleryComponent },
-  { path: 'home',redirectTo:''},
+  { path:'home',redirectTo:''},
   { path:'booking',
       loadChildren:() => import('./booking/booking.module').then(m => m.BookingModule)},
   { path:'ride',
