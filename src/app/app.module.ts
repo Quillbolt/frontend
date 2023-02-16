@@ -15,7 +15,8 @@ import {NgxPrintModule} from 'ngx-print';
         AppComponent,
         HomeComponent,
         GalleryComponent,
-        AboutComponent
+        AboutComponent,
+        
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-weather',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent {
-
+  @Input() location: string='Dubai';
+  @Input() weatherCondition: string='Partly cloudy';
+  @Input() weather: [number,number] = [30,20];
+  today: Date = new Date();
 }

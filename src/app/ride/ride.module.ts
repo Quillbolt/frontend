@@ -8,7 +8,8 @@ import { RideDetailComponent } from './ride-detail/ride-detail.component';
 
 const routes : Routes =[
   { path:'',component: HomeComponent },
-  { path: 'rides',component:RidesComponent},  
+  { path: 'rides',component:RidesComponent}, 
+  { path: 'ride',component:RideDetailComponent}
 ]
 
 @NgModule({

@@ -1,5 +1,4 @@
-<!-- Container for demo purpose -->
-<div class="container my-24 px-6 mx-auto">
+
 
     <!-- Section: Design Block -->
     <section class="mb-32 text-gray-800 text-center">
@@ -25,11 +24,11 @@
                     
                     class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                     id="exampleInput7"
-                    placeholder="name"
+                    placeholder="Name"
                     formControlName="name"
                   />
-                  <div *ngIf="submitted && f['name'].errors" class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium">
-                    <div *ngIf="f['name'].errors['required']">Name is required</div>
+                  <div *ngIf="submitted && f['name'].errors" class="mt-2 justify-start items-start text-sm text-red-600 dark:text-red-500 font-medium">
+                    <p *ngIf="f['name'].errors['required']" class="text-left">Name is required</p>
                   </div>
                 </div>
                 <div class="form-group mb-6">
@@ -41,7 +40,7 @@
                     formControlName="email"
                     [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
                   />
-                  <div *ngIf="submitted && f['email'].errors" class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium">
+                  <div *ngIf="submitted && f['email'].errors" class="mt-2 text-sm text-left text-red-600 dark:text-red-500 font-medium">
                     <div *ngIf="f['email'].errors['required']">Email is required</div>
                     <div *ngIf="f['email'].errors['email']">Email is invalid</div>
                   </div>

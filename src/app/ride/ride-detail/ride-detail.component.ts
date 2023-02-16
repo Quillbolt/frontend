@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ridetail } from 'src/app/interfaces/ridetail.interface';
 @Component({
   selector: 'app-ride-detail',
   templateUrl: './ride-detail.component.html',
@@ -8,6 +10,10 @@ import { Component, Input } from '@angular/core';
 export class RideDetailComponent {
  @Input() headImage = 'https://source.unsplash.com/random/480x360';
  @Input() Title = ''
-//  @Input() headImage = ''
-//  @Input() headImage = ''
+  rideDetail!:Observable<ridetail> 
+ constructor(
+  private route: ActivatedRoute,
+  private router: Router,
+){} 
+ 
 }

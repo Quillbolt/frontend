@@ -16,7 +16,7 @@ export const posts:  BlogPostCard[] = [
       category: 'Bumper boats',
       title: 'The Road to Freedom',
       description:
-        'an amusement park ride that uses inner tube shaped watercraft that can be steered by the rider',
+        'An amusement park ride that uses inner tube shaped watercraft that can be steered by the rider',
       authorImageUrl: 'https://source.unsplash.com/7YVZYZeITc8/30x30',
       authorName: 'John Smith',
       postDate: '10th August 2020',

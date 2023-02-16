@@ -10,7 +10,10 @@ export class ReserveComponent implements OnInit {
   reserve_form: FormGroup = new FormGroup({
     fName: new FormControl(''),
     lastname: new FormControl(''),
-    date: new FormControl('')
+    guest:new FormControl(''),
+    phone: new FormControl(''),
+    date: new FormControl(''),
+    time: new FormControl('')
   })
   submitted = false;
   constructor(private formbuilder: FormBuilder) { }
@@ -18,8 +21,10 @@ export class ReserveComponent implements OnInit {
     this.reserve_form = this.formbuilder.group({
       fName: ['', Validators.required],
       lastname: ['', Validators.required],
-      guest:['',Validators.required,Validators.min(2)],
-      rdate: ['', Validators.required],
+      guest:['',[Validators.required,Validators.min(2)]],
+      phone:['',[Validators.required,Validators.minLength(9)]],
+      date: ['', Validators.required],
+      time: ['', Validators.required]
     })
   }
   get f(): { [key: string]: AbstractControl } {

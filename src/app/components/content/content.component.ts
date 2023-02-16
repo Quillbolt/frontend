@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent {
+  @Input() headline: string = 'Hello';
 
+  @Input() body: string = 'Hello';
+
+  @Input() leftimage: string = '';
+
+  @Input() rightimage: string = '';
+
+  @Input() smallheader: string ='';
 }
