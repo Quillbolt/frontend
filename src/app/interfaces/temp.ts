@@ -24,7 +24,7 @@ export const posts:  BlogPostCard[] = [
     {
       mainImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Flumeride.jpg/330px-Flumeride.jpg',
       category: 'Log flume',
-      title: 'log rides',
+      title: 'Log rides',
       description:
         'Passengers sit in the logs, which are propelled along the flume by the flow of water',
       authorImageUrl: 'https://source.unsplash.com/7YVZYZeITc8/30x30',
@@ -34,7 +34,7 @@ export const posts:  BlogPostCard[] = [
     {
       mainImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/DragonFalls_Splash.jpg/330px-DragonFalls_Splash.jpg',
       category: 'Log flume',
-      title: 'log rides',
+      title: 'Log rides',
       description:
         'Passengers sit in the logs, which are propelled along the flume by the flow of water',
       authorImageUrl: 'https://source.unsplash.com/7YVZYZeITc8/30x30',

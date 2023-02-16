@@ -15,6 +15,7 @@ const routes: Routes = [
       loadChildren:() => import('./ride/ride.module').then(m => m.RideModule)},
   { path:'dining',
       loadChildren:() => import('./dining/dining.module').then(m => m.DiningModule)},
+  { path:'facilities',loadChildren:() => import('./facilities/facilities.module').then(m => m.FacilitiesModule)},
   { path:'about',component:AboutComponent }  
 ];
 

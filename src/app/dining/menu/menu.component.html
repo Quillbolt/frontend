@@ -6,72 +6,33 @@
     <ul class="bg-[#966F33] w-1/2 inline-block">
       <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
       <li class="pb-20 text-2xl">
-        <ul class="menu">
+        <ul class="menu" >
           <li class="py-4 font-sans font-bold" data-img="img/1.jpg">
             Dish #1 - 5
           </li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
+          <li *ngFor="let drink of drinks" class="grid grid-cols-6">
+            <span class="col-start-1 col-span-3 mt-2">{{drink.name}}</span>. 
+            <span class="col-end-7 col-span-2">{{drink.price|currency:'USD':'symbol'}}</span></li>
         </ul>
       </li>
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
+      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Deserts</li>
+      <li class="pb-20 text-2xl">
+        <ul>
+          <li class="py-4 font-sans font-bold" data-img="img/1.jpg">
+            Dish #1 - 5
+          </li>
+          <li *ngFor="let desert of deserts" class="grid grid-cols-6">
+            <span class="col-start-1 col-span-3 mt-2">{{desert.name}}</span>. 
+            <span class="col-end-7 col-span-2">{{desert.price|currency:'USD':'symbol'}}</span></li>
+        </ul>
+      </li>
+      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Light Meal</li>
       <li class="pb-20 text-2xl">
         <ul>
           <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-        </ul>
-      </li>
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
-      <li class="pb-20 text-2xl">
-        <ul>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-        </ul>
-      </li>
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
-      <li class="pb-20 text-2xl">
-        <ul>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
-          <li>Component 1 . Component 2 . Component . Component 4</li>
+          <li *ngFor="let light of lights" class="grid grid-cols-6">
+            <span class="col-start-1 col-span-3 mt-2">{{light.name}}</span>. 
+            <span class="col-end-7 col-span-2">{{light.price|currency:'USD':'symbol'}}</span></li>
         </ul>
       </li>
     </ul>
