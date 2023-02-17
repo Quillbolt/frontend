@@ -9,4 +9,5 @@ export interface Customer {
         CVC:string;
     };
     country:string;
+    zipcode:string;
 }

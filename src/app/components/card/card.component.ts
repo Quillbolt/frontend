@@ -10,8 +10,6 @@ export class CardComponent implements OnInit {
 
   @Input()
   data!: BlogPostCard;
-  @Input()
-  routerLink!: string;
   constructor() {}
   ngOnInit(): void {}
 }

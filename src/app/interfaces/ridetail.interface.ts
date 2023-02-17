@@ -1,4 +1,4 @@
-export interface ridetail {
+export interface rideDetails {
     id: number;
     title:string;
     // image:string;
