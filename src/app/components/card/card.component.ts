@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { BlogPostCard } from 'src/app/interfaces/ride';
 
 @Component({
   selector: 'app-card',
@@ -6,14 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() padding: any = "p-4";
-  @Input() cardTitle: string = "";
-  @Input() cardClasses: string = "";
-  @Input() titleMargin: string = "mt-4 mb-1";
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @Input()
+  data!: BlogPostCard;
+  constructor() {}
+  ngOnInit(): void {}
 }
+
+
+
+
+

@@ -1,0 +1,175 @@
+<!-- component -->
+<div class="flex items-center justify-center p-12">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="mx-auto w-full max-w-[550px]">
+    <form [formGroup]="reserve_form" (ngSubmit)="onSubmit()">
+      <div class="-mx-3 flex flex-wrap">
+        <div class="w-full px-3 sm:w-1/2">
+          <div class="mb-5">
+            <label
+              for="fName"
+              class="mb-3 block text-base font-medium text-[#07074D] dark:text-gray-400"
+            >
+              First Name
+            </label>
+            <input
+              type="text"
+              name="fName"
+              id="fName"
+              placeholder="First Name"
+              formControlName="fName"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+            <div
+              *ngIf="submitted && f['fName'].errors"
+              class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium"
+            >
+              <div *ngIf="f['fName'].errors['required']">
+                First Name is required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-3 sm:w-1/2">
+          <div class="mb-5">
+            <label
+              for="lName"
+              class="mb-3 block text-base font-medium text-[#07074D] dark:text-gray-400"
+            >
+              Last Name
+            </label>
+            <input
+              type="text"
+              name="lName"
+              id="lName"
+              placeholder="Last Name"
+              formControlName="lastname"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+            <div
+              *ngIf="submitted && f['lastname'].errors"
+              class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium"
+            >
+              <div *ngIf="f['lastname'].errors['required']">
+                Last Name is required
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-5">
+        <label
+          for="guest"
+          class="mb-3 block text-base font-medium text-[#07074D] dark:text-gray-400"
+        >
+          How many guest are you bringing?
+        </label>
+        <input
+          type="number"
+          name="guest"
+          id="guest"
+          placeholder="5"
+          formControlName="guest"
+          class="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+        <div
+          *ngIf="submitted && f['guest'].errors"
+          class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium"
+        >
+          <div *ngIf="f['guest'].errors['required']">Number is required</div>
+          <div *ngIf="f['guest'].errors['min']">
+            Number cannot be smaller than 2
+          </div>
+        </div>
+      </div>
+      <div class="mb-5">
+        <label
+          for="phone"
+          class="mb-3 block text-base font-medium text-[#07074D] dark:text-gray-400"
+        >
+          How do we contact you?
+        </label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Phone Number"
+          min="0"
+          formControlName="phone"
+          class="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+        />
+        <div
+          *ngIf="submitted && f['phone'].errors"
+          class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium"
+        >
+          <div *ngIf="f['phone'].errors['required']">Phone is required</div>
+          <div *ngIf="f['phone'].errors['pattern']">
+            Phone must be at least 9 number
+          </div>
+        </div>
+      </div>
+      <div class="-mx-3 flex flex-wrap">
+        <div class="w-full px-3 sm:w-1/2">
+          <div class="mb-5">
+            <label
+              for="date"
+              class="mb-3 block text-base font-medium text-[#07074D] dark:text-gray-400"
+            >
+              Date
+            </label>
+            <input
+              type="date"
+              name="date"
+              id="date"
+              formControlName="date"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+            <div
+            *ngIf="submitted && f['date'].errors"
+            class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium"
+          >
+            <div *ngIf="f['date'].errors['required']">
+              Day reserved is required
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="w-full px-3 sm:w-1/2">
+          <div class="mb-5">
+            <label
+              for="time"
+              class="mb-3 block text-base font-medium text-[#07074D] dark:text-gray-400"
+            >
+              Time
+            </label>
+            <input
+              type="time"
+              name="time"
+              id="time"
+              formControlName="time"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+            <div
+            *ngIf="submitted && f['time'].errors"
+            class="mt-2 text-sm text-red-600 dark:text-red-500 font-medium"
+          >
+            <div *ngIf="f['time'].errors['required']">
+              Time required
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

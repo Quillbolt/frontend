@@ -1,4 +1,4 @@
-import { Component,  OnInit } from '@angular/core';
+import { Component,  OnInit,Input } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -7,9 +7,10 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+
   title = 'Angular WaterPark';
   public menuOpen: boolean = false;
-  
+  @Input() logo = "../../../assets/logo.png";
   constructor(private router: Router) {
   }
 
@@ -22,5 +23,6 @@ export class AppComponent implements OnInit{
       window.scrollTo(0, 0)
     });
   }
+
 }
 

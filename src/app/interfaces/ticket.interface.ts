@@ -1,11 +1,19 @@
 import { Customer } from "./customer.interface";
 
 export interface Ticket {
-    id :string;
-    userid: Customer;
-    create_on : Date;
-    checkin : Date;
-    sha_256 : string;
-    pass : string;
+    name: string;
+    prices: number;
+    quantity: number;
 }
 
+export interface ticket_range{
+    name: string;
+    prices  : number;
+    benefit: string
+}
+
+export const  TICKET: ticket_range[] =[
+    { name: "Adults'",prices: 39, benefit:'' },
+    { name: "Vip",prices: 89,benefit:'' }
+
+]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
+  /* Hero */
+  @Input() item : string = 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png'
 
+  @Input() headline : string = 'Enjoy family fun at a local water park!';
+
+  @Input() textdescription : string ='Looking for a fun day out? Visit a water park! This unique experience offers a variety of activities to keep you entertained all day long.'
+
+  @Input() linkage: string ='/about'
 }

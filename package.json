@@ -10,7 +10,7 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "lint": "ng lint",
-    "tailwind:dev": "npx tailwindcss@2.0.0-alpha.11 build -c tailwindcss-config.js style.scss -o ./src/tailwind.css",
+    "tailwind:dev": "npx tailwindcss@3.2.4-alpha.11 build -c tailwindcss-config.js style.scss -o ./src/tailwind.css",
     "tailwind:prod": "NODE_ENV=production npx tailwindcss@2.0.0-alpha.11 build -c tailwindcss-config.js style.scss -o ./src/tailwind.css"
   },
   "private": true,
@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -40,6 +41,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ngx-print": "^1.3.1",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4",
     "typescript": "~4.8.2"
