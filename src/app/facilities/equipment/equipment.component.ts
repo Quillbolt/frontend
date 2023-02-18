@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Equiment } from 'src/app/interfaces/equiment'
+import { Equiment } from '../../interfaces/equiment'
 @Component({
   selector: 'app-equipment',
   templateUrl: './equipment.component.html',

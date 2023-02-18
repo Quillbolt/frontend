@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, map, of } from 'rxjs';
-import { rideDetails } from '../interfaces/ridetail.interface';
+
 
 import { RIDETAIL,posts } from '../mockdata/ridedata';
 import { MessageService } from './message.service';

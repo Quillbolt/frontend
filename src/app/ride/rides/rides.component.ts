@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
-import { slideInAnimation } from 'src/app/animations';
-import { BlogPostCard } from 'src/app/interfaces/ride';
-import { rideDetails } from 'src/app/interfaces/ridetail.interface';
+import { slideInAnimation } from '../../animations';
+import { BlogPostCard } from '../../interfaces/ride';
 
-import { RideService } from 'src/app/services/ride.service';
+
+import { RideService } from '../../services/ride.service';
 
 @Component({
   selector: 'app-rides',

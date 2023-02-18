@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BlogPostCard } from 'src/app/interfaces/ride';
+import { BlogPostCard } from '../../interfaces/ride';
 
 @Component({
   selector: 'app-card',

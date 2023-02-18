@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { carouselItems } from 'src/app/interfaces/ridetail.interface';
+import { carouselItems } from '../../interfaces/ridetail.interface';
 
 @Component({
   selector: 'app-imagecarousel',

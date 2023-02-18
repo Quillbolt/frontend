@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FooDesert, FooDrink, FooLights } from 'src/app/interfaces/food';
+import { FooDesert, FooDrink, FooLights } from '../../interfaces/food';
 
 @Component({
   selector: 'app-menu',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import {  Ticket } from 'src/app/interfaces/ticket.interface';
-import { LocalService } from 'src/app/services/local.service';
+import {  Ticket } from '../../interfaces/ticket.interface';
+import { LocalService } from '../../services/local.service';
 
 @Component({
   selector: 'app-checkout',

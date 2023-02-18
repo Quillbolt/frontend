@@ -2,13 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { Location } from '@angular/common';
-import { slideInAnimation } from 'src/app/animations';
+import { slideInAnimation } from '../../animations';
 
-import { BlogPostCard } from 'src/app/interfaces/ride';
-import { rideDetails } from 'src/app/interfaces/ridetail.interface';
+import { BlogPostCard } from '../../interfaces/ride';
 
 
-import { RideService } from 'src/app/services/ride.service';
+
+import { RideService } from '../../services/ride.service';
 @Component({
   selector: 'app-ride-detail',
   templateUrl: './ride-detail.component.html',
