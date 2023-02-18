@@ -7,12 +7,14 @@ import { RidesComponent } from './rides/rides.component';
 import { RideDetailComponent } from './ride-detail/ride-detail.component';
 import { FormsModule } from '@angular/forms';
 
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const routes : Routes =[
-  // { path:'',component: HomeComponent },
+  // { path:'dashboard',component: HomeComponent },
   // { path: 'rides',component:RidesComponent}, 
   // { path: 'ride',component:RideDetailComponent},
   { path: '',  component: RidesComponent, data: { animation: 'rides' }  },
-  { path: 'ride/:id', component: RideDetailComponent, data: { animation: 'ride' }}
+  { path: ':id', component: RideDetailComponent, data: { animation: 'ride' }}
 ]
 
 @NgModule({
@@ -25,7 +27,8 @@ const routes : Routes =[
     CommonModule,
     RouterModule.forChild(routes),
     ComponentsModule,
-    FormsModule
+    FormsModule,
+    // BrowserAnimationsModule,
   ],
   exports:[
     RouterModule

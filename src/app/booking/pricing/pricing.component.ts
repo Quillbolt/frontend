@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TICKET } from 'src/app/interfaces/ticket.interface';
 
 @Component({
   selector: 'app-pricing',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./pricing.component.css']
 })
 export class PricingComponent {
-
+  price = TICKET;
 }

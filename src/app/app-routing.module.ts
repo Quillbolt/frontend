@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path:'home' ,component:HomeComponent },
-  { path:'',redirectTo: 'ride'},
+  { path:'',redirectTo: 'home'},
   { path:'gallery',component:GalleryComponent },
   { path:'home',redirectTo:''},
   { path:'booking',

@@ -20,8 +20,8 @@
         </div>
 
         <div>
-          <p class="text-2xl font-medium tracking-tight text-gray-900">
-            {{Total}}
+          <p class="text-2xl font-medium tracking-tight text-gray-900" >
+             Total{{total| currency: 'USD':'symbol'}}
           </p>
 
           <p class="mt-1 text-sm text-gray-600">For the purchase of</p>
@@ -44,6 +44,7 @@
                     <div>
                       <dt class="inline">Type:</dt>
                       <dd class="inline">Adults</dd>
+                      <dd class="inline ml-6 text-lg">{{products[0].prices |currency: 'USD':'symbol'}}</dd>
                     </div>
                   </dl>
 
@@ -55,7 +56,7 @@
                     <button
                       type="button"
                       class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
-                      (click)="Adults= Adults - 1"
+                      (click)="products[0].quantity= products[0].quantity - 1"
                     >
                       &minus;
                     </button>
@@ -63,14 +64,15 @@
                     <input
                       type="number"
                       id="QuantityA"
-                      value="{{Adults}}"
+                      [(ngModel)]="products[0].quantity"
+                      
                       class="w-24 h-10 border-gray-200 rounded sm:text-sm"
                     />
                 
                     <button
                       type="button"
                       class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
-                      (click)="Adults = Adults + 1" 
+                      (click)="products[0].quantity = products[0].quantity + 1" 
                     >
                       &plus;
                     </button>
@@ -94,6 +96,7 @@
                     <div>
                       <dt class="inline">Type:</dt>
                       <dd class="inline">Children</dd>
+                      <dd class="inline ml-6 text-lg">{{products[1].prices |currency: 'USD':'symbol'}}</dd>
                     </div>
                   </dl>
                   
@@ -104,7 +107,7 @@
     <button
       type="button"
       class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
-      (click)="Child= Child - 1"
+      (click)="products[1].quantity= products[1].quantity - 1"
     >
       &minus;
     </button>
@@ -112,14 +115,14 @@
     <input
       type="number"
       id="QuantityC"
-      value="{{Child}}"
+      [(ngModel)]="products[1].quantity"
       class="w-24 h-10 border-gray-200 rounded sm:text-sm"
     />
 
     <button
       type="button"
       class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
-      (click)="Child= Child - 1"
+      (click)="products[1].quantity= products[1].quantity + 1"
     >
       &plus;
     </button>

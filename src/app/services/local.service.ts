@@ -7,8 +7,9 @@ export class LocalService {
 
   constructor() { }
   
-  public saveData(key: string, value: string) {
-    localStorage.setItem(key, value);
+  public saveData(key: string, data: string| JSON) {
+    const jsonData = JSON.stringify(data)
+    localStorage.setItem(key, jsonData)
   }
 
   public getData(key: string) {
