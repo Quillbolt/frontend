@@ -1,6 +1,29 @@
+<section class="">
+<app-hero
+  [textdescription]="textdescription"
+  [headline]="headline"
+  [item]="image"
+></app-hero>
+<app-stat></app-stat>
+<section class="py-6 dark:bg-gray-800">
+	<div class="container flex flex-col justify-center p-4 mx-auto">
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
+			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src="../../assets/crush-n-gusher-gallery00.webp" alt="image carousel">
+			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src="../../assets/crush-n-gusher-gallery01.webp" alt="image carousel">
+			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src="../../assets/crush-n-gusher-gallery03.webp" alt="image carousel">
+			<img class="object-cover w-full dark:bg-gray-500 aspect-square" src="../../assets/crush-n-gusher-gallery08.webp" alt="image carousel">
+		</div>
+	</div>
+</section>
 
+<app-blog></app-blog>
 
-<app-hero [textdescription]="textdescription" [headline]="headline" [item]="image"></app-hero>
-<app-imagecarousel [imageCarousel]="imageCarousel"></app-imagecarousel>
-<app-content [leftimage]="lefter" [rightimage]="righter"[body]="body" [headline]="header" [smallheader]="smallheader"></app-content>
+<!-- <app-content
+  [leftimage]="lefter"
+  [rightimage]="righter"
+  [body]="body"
+  [headline]="header"
+  [smallheader]="smallheader"
+></app-content> -->
 <app-testimonial></app-testimonial>
+</section>
