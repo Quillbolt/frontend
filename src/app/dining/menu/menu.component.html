@@ -3,36 +3,42 @@
     <div class="flex justify-center items-center">
         <img src="../../../assets/detourCapture.svg" alt="menu logo">
       </div>
-    <ul class="bg-[#966F33] w-1/2 inline-block">
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Drinks</li>
+    
+    <ul class="bg-primary-200 w-1/2 inline-block">
+      <li class="pt-9 pb-8 text-8xl text-primary-700 font-sans font-bold">Menu</li>
+      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase text-primary-700">Drinks</li>
       <li class="pb-20 text-2xl">
         <ul class="menu" >
-          <li class="py-4 font-sans font-bold" data-img="img/1.jpg">
-            Dish #1 - 5
+          <li class="py-4 font-sans font-bold text-primary-700 flex">
+            <img src="https://source.unsplash.com/TgQkxQc-t_U/80x80" alt="drinks image" srcset="" class="mx-auto">
+            
           </li>
           <li *ngFor="let drink of drinks" class="grid grid-cols-6">
-            <span class="col-start-1 col-span-3 mt-2">{{drink.name}}</span>. 
-            <span class="col-end-7 col-span-2">{{drink.price|currency:'USD':'symbol'}}</span></li>
+            <span class="col-start-1 col-span-3 mt-2 text-primary-700">{{drink.name}}</span>. 
+            <span class="col-end-7 col-span-2 text-primary-500">{{drink.price|currency:'USD':'symbol'}}</span></li>
         </ul>
       </li>
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Deserts</li>
+      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase text-primary-700">Deserts</li>
       <li class="pb-20 text-2xl">
         <ul>
-          <li class="py-4 font-sans font-bold" data-img="img/1.jpg">
-            Dish #1 - 5
+          <li class="py-4 font-sans font-bold text-primary-700 flex">
+            <img src="../../../assets/photo-1606313564200-e75d5e30476c.jfif" alt="deserts image" class="mx-auto">
+            
           </li>
           <li *ngFor="let desert of deserts" class="grid grid-cols-6">
-            <span class="col-start-1 col-span-3 mt-2">{{desert.name}}</span>. 
-            <span class="col-end-7 col-span-2">{{desert.price|currency:'USD':'symbol'}}</span></li>
+            <span class="col-start-1 col-span-3 mt-2 text-primary-700">{{desert.name}}</span>. 
+            <span class="col-end-7 col-span-2 text-primary-600">{{desert.price|currency:'USD':'symbol'}}</span></li>
         </ul>
       </li>
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase">Light Meal</li>
+      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase text-primary-700">Light Meal</li>
       <li class="pb-20 text-2xl">
         <ul>
-          <li class="py-4 font-sans font-bold">Dish #1 - 5</li>
+          <li class="py-4 font-sans font-bold text-primary-700 flex">
+            <img src="https://source.unsplash.com/pu6b4yIlQF4/80x80" alt="pu6b4yIlQF4" srcset="" class="mx-auto">
+            </li>
           <li *ngFor="let light of lights" class="grid grid-cols-6">
-            <span class="col-start-1 col-span-3 mt-2">{{light.name}}</span>. 
-            <span class="col-end-7 col-span-2">{{light.price|currency:'USD':'symbol'}}</span></li>
+            <span class="col-start-1 col-span-3 mt-2 text-primary-700">{{light.name}}</span>. 
+            <span class="col-end-7 col-span-2 text-primary-600">{{light.price|currency:'USD':'symbol'}}</span></li>
         </ul>
       </li>
     </ul>

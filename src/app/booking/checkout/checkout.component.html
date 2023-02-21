@@ -20,8 +20,8 @@
         </div>
 
         <div>
-          <p class="text-2xl font-medium tracking-tight text-gray-900" >
-             Total{{total| currency: 'USD':'symbol'}}
+          <p class="text-2xl font-medium tracking-tight text-gray-900">
+            Total{{ total | currency : "USD" : "symbol" }}
           </p>
 
           <p class="mt-1 text-sm text-gray-600">For the purchase of</p>
@@ -32,7 +32,7 @@
             <ul class="-my-4 divide-y divide-gray-100">
               <li class="flex items-center py-4">
                 <img
-                  src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80"
+                  src="../../../assets/samuel-regan-asante-7MyzSlrUsVk-unsplash.jpg"
                   alt=""
                   class="object-cover w-16 h-16 rounded"
                 />
@@ -44,47 +44,52 @@
                     <div>
                       <dt class="inline">Type:</dt>
                       <dd class="inline">Adults</dd>
-                      <dd class="inline ml-6 text-lg">{{products[0].prices |currency: 'USD':'symbol'}}</dd>
+                      <dd class="inline ml-6 text-lg">
+                        {{ products[0].prices | currency : "USD" : "symbol" }}
+                      </dd>
                     </div>
                   </dl>
 
-                
-                <div>
-                  <label for="QuantityA" class="sr-only"> Quantity </label>
-                
-                  <div class="flex items-center gap-1">
-                    <button
-                      type="button"
-                      class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
-                      (click)="products[0].quantity= products[0].quantity - 1"
-                    >
-                      &minus;
-                    </button>
-                
-                    <input
-                      type="number"
-                      id="QuantityA"
-                      [(ngModel)]="products[0].quantity"
-                      
-                      class="w-24 h-10 border-gray-200 rounded sm:text-sm"
-                    />
-                
-                    <button
-                      type="button"
-                      class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
-                      (click)="products[0].quantity = products[0].quantity + 1" 
-                    >
-                      &plus;
-                    </button>
-                  </div>
-                </div>
+                  <div>
+                    <label for="QuantityA" class="sr-only"> Quantity </label>
 
+                    <div class="flex items-center gap-1">
+                      <button
+                        type="button"
+                        class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
+                        (click)="
+                          products[0].quantity = products[0].quantity - 1
+                        "
+                      >
+                        &minus;
+                      </button>
+
+                      <input
+                        type="number"
+                        id="QuantityA"
+                        [(ngModel)]="products[0].quantity"
+                        class="w-24 h-10 border-gray-200 rounded sm:text-sm"
+                      />
+
+                      <button
+                        type="button"
+                        class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
+                        (click)="
+                          products[0].quantity = products[0].quantity + 1
+                        "
+                      >
+                        &plus;
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </li>
 
               <li class="flex items-center py-4">
                 <img
-                  src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80"
+                  src="../../../assets/samuel-regan-asante-7MyzSlrUsVk-unsplash.jpg"
+                  width="50"
+                  height="50"
                   alt=""
                   class="object-cover w-16 h-16 rounded"
                 />
@@ -96,41 +101,51 @@
                     <div>
                       <dt class="inline">Type:</dt>
                       <dd class="inline">Children</dd>
-                      <dd class="inline ml-6 text-lg">{{products[1].prices |currency: 'USD':'symbol'}}</dd>
+                      <dd class="inline ml-6 text-lg">
+                        {{ products[1].prices | currency : "USD" : "symbol" }}
+                      </dd>
                     </div>
                   </dl>
-                  
-<div>
-  <label for="QuantityC" class="sr-only"> Quantity </label>
 
-  <div class="flex items-center gap-1">
-    <button
-      type="button"
-      class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
-      (click)="products[1].quantity= products[1].quantity - 1"
-    >
-      &minus;
-    </button>
+                  <div>
+                    <label for="QuantityC" class="sr-only"> Quantity </label>
 
-    <input
-      type="number"
-      id="QuantityC"
-      [(ngModel)]="products[1].quantity"
-      class="w-24 h-10 border-gray-200 rounded sm:text-sm"
-    />
+                    <div class="flex items-center gap-1">
+                      <button
+                        type="button"
+                        class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
+                        (click)="
+                          products[1].quantity = products[1].quantity - 1
+                        "
+                      >
+                        &minus;
+                      </button>
 
-    <button
-      type="button"
-      class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
-      (click)="products[1].quantity= products[1].quantity + 1"
-    >
-      &plus;
-    </button>
-  </div>
-</div>
+                      <input
+                        type="number"
+                        id="QuantityC"
+                        [(ngModel)]="products[1].quantity"
+                        class="w-24 h-10 border-gray-200 rounded sm:text-sm"
+                      />
+
+                      <button
+                        type="button"
+                        class="w-10 h-10 leading-10 text-gray-600 transition hover:opacity-75"
+                        (click)="
+                          products[1].quantity = products[1].quantity + 1
+                        "
+                      >
+                        &plus;
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>
+          </div>
+          <div class="flex items-center py-4 gap-5">
+            <label for="checkIndate">Check In date</label>
+            <input type="date" name="" id="checkIndate" required class="w-24 h-10 border-gray-200 rounded sm:text-sm pl-16">
           </div>
         </div>
       </div>
@@ -140,7 +155,7 @@
       <div class="max-w-lg px-4 mx-auto lg:px-8">
         <form
           [formGroup]="checkout_form"
-          (ngSubmit)="(onSubmit())"
+          (ngSubmit)="onSubmit()"
           class="grid grid-cols-6 gap-4"
         >
           <div class="col-span-3">
@@ -274,35 +289,37 @@
               </div>
 
               <div class="flex -space-x-px dark:bg-gray-900">
-                <div class="flex-1 ">
-              
-                    <label for="CardExpiry" class="sr-only dark:bg-gray-900"> Card Expiry </label>
+                <div class="flex-1">
+                  <label for="CardExpiry" class="sr-only dark:bg-gray-900">
+                    Card Expiry
+                  </label>
 
-                    <input
-                      type="text"
-                      id="CardExpiry"
-                      placeholder="Expiry Date"
-                      formControlName="ExpiryDate"
-                      class="relative w-full dark:bg-gray-900 border-gray-200 rounded-bl-md focus:z-10 sm:text-sm"
-                    />
+                  <input
+                    type="text"
+                    id="CardExpiry"
+                    placeholder="Expiry Date"
+                    formControlName="ExpiryDate"
+                    class="relative w-full dark:bg-gray-900 border-gray-200 rounded-bl-md focus:z-10 sm:text-sm"
+                  />
                   >
-          
 
-                <div
-                  *ngIf="submitted && f['ExpiryDate'].errors"
-                  class="mt-2 text-xs text-red-600 dark:text-red-400"
-                >
                   <div
-                    *ngIf="f['ExpiryDate'].errors['required']"
-                    class="font-medium"
+                    *ngIf="submitted && f['ExpiryDate'].errors"
+                    class="mt-2 text-xs text-red-600 dark:text-red-400"
                   >
-                  ExpiryDate is required
+                    <div
+                      *ngIf="f['ExpiryDate'].errors['required']"
+                      class="font-medium"
+                    >
+                      ExpiryDate is required
+                    </div>
                   </div>
-                </div>
                 </div>
 
                 <div class="flex-1">
-                  <label for="CardExpiry" class="sr-only dark:bg-gray-900">CVC </label>
+                  <label for="CardExpiry" class="sr-only dark:bg-gray-900"
+                    >CVC
+                  </label>
 
                   <input
                     type="text"
@@ -312,16 +329,16 @@
                     class="relative w-full dark:bg-gray-900 border-gray-200 rounded-bl-md focus:z-10 sm:text-sm"
                   />
                   <div
-                  *ngIf="submitted && f['CVC'].errors"
-                  class="mt-2 text-xs text-red-600 dark:text-red-400"
-                >
-                  <div
-                    *ngIf="f['CVC'].errors['required']"
-                    class="font-medium"
+                    *ngIf="submitted && f['CVC'].errors"
+                    class="mt-2 text-xs text-red-600 dark:text-red-400"
                   >
-                    CVC is required
+                    <div
+                      *ngIf="f['CVC'].errors['required']"
+                      class="font-medium"
+                    >
+                      CVC is required
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
@@ -332,9 +349,15 @@
               Billing Address
             </legend>
 
-            <div class="mt-1 -space-y-px bg-white rounded-md shadow-sm dark:bg-gray-900">
+            <div
+              class="mt-1 -space-y-px bg-white rounded-md shadow-sm dark:bg-gray-900"
+            >
               <div>
-                <label for="Country" class="sr-only dark:bg-gray-900 dark:text-gray-500">Country</label>
+                <label
+                  for="Country"
+                  class="sr-only dark:bg-gray-900 dark:text-gray-500"
+                  >Country</label
+                >
 
                 <select
                   id="Country"
@@ -351,7 +374,9 @@
               </div>
 
               <div>
-                <label class="sr-only dark:bg-gray-900" for="PostalCode"> ZIP/Post Code </label>
+                <label class="sr-only dark:bg-gray-900" for="PostalCode">
+                  ZIP/Post Code
+                </label>
 
                 <input
                   type="text"

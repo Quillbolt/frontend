@@ -6,3 +6,9 @@ local storage for ticket bookings
 angular form validation
 ngxprint for printing ticket
 google map embeded link
+
+change navbar color ;button color in  the navbar bg-white color//
+add benefit in ticket bookings//
+menu color in light theme change form brown -500 to ?//
+ride break in light theme// done
+change image margin?

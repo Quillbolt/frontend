@@ -18,11 +18,11 @@ header:string='Slide Into Fun'
 smallheader:string='Splash, swim and slide into the perfect day at this must see Gold Coast destination!'
 //carousel
 imageCarousel= [
-  {url:'https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/gallery/attractions/typhoon-lagoon/crush-n-gusher/crush-n-gusher-gallery00.jpg?1658993543077'},
-  {url:'https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/gallery/attractions/typhoon-lagoon/crush-n-gusher/crush-n-gusher-gallery01.jpg?1658993543077'},
-  {url:'https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/gallery/attractions/typhoon-lagoon/crush-n-gusher/crush-n-gusher-gallery03.jpg?1658993543077'},
-  {url: 'https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/gallery/attractions/typhoon-lagoon/crush-n-gusher/crush-n-gusher-gallery08.jpg?1658993543078'},
-  {url:'https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/gallery/attractions/typhoon-lagoon/surf-pool/typhoon-lagoon-surf-pool-gallery02.jpg?1659021851071'}
+  {url:'../../../assets/crush-n-gusher-gallery00.webp'},
+  {url:'../../../assets/crush-n-gusher-gallery03.webp'},
+  {url:'../../../assets/crush-n-gusher-gallery01.webp'},
+  {url: '../../../assets/crush-n-gusher-gallery08.webp'},
+  {url:'../../../assets/crush-n-gusher-gallery00.webp'}
 ]
 
 

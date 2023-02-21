@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
-import { Location } from '@angular/common';
+import { Location} from '@angular/common';
 import { slideInAnimation } from '../../animations';
 
 import { BlogPostCard } from '../../interfaces/ride';

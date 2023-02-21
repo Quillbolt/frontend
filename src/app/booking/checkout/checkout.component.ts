@@ -20,6 +20,7 @@ export class CheckoutComponent implements OnInit {
     CVC: new FormControl(''),
     ZIP: new FormControl('')
   });
+  
   submitted = false;
   Adults: number = 1;
   Child: number = 0;
@@ -59,7 +60,10 @@ export class CheckoutComponent implements OnInit {
     }
     this.id = this.id + 1;
     console.log(JSON.stringify(this.checkout_form.value, null, 2));
-    this.localservice.saveData(this.id.toString(), this.checkout_form.value)
+    // console.log(JSON.stringify(this.products,null, 2));
+    
+    const save=JSON.stringify([this.checkout_form.value,this.products]);
+    this.localservice.saveData('mydata', save)
     this.router.navigate(['booking','ticket'])
   }
   get total() {
