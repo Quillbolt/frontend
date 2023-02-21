@@ -11,12 +11,14 @@ import { AboutComponent } from './about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import {NgxPrintModule} from 'ngx-print';
+import { FAQComponent } from './faq/faq.component';
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         GalleryComponent,
         AboutComponent,
+        FAQComponent,
         
     ],
     providers: [],

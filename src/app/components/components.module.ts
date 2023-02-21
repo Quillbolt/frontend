@@ -9,6 +9,7 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { WeatherComponent } from './weather/weather.component';
 import { BlogComponent } from './blog/blog.component';
 import { StatComponent } from './stat/stat.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 
@@ -21,7 +22,8 @@ import { StatComponent } from './stat/stat.component';
     TestimonialComponent,
     WeatherComponent,
     BlogComponent,
-    StatComponent
+    StatComponent,
+    TabsComponent
   ],
   imports: [
     CommonModule,RouterModule
@@ -35,6 +37,7 @@ import { StatComponent } from './stat/stat.component';
     TestimonialComponent,
     WeatherComponent,
     StatComponent,
+    TabsComponent
   ]
 })
 export class ComponentsModule { }
