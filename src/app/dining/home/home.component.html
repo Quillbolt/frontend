@@ -1,2 +1,7 @@
 <app-hero [textdescription]="textdescription" [headline]="headline" [item]="image" [linkage]="linkage"></app-hero>
-<app-content [leftimage]="lefter" [rightimage]="righter"[body]="body" [headline]="header" [smallheader]="smallheader"></app-content>
+<div class="flex">
+<button (click)="onclick()" type="button" class="shadow-md rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500 px-36 mx-auto py-5">{{ReadMore?"Read More":"Read Less"}}</button>
+</div>
+<ng-container *ngIf="visible">
+    <app-content [leftimage]="lefter" [rightimage]="righter"[body]="body" [headline]="header" [smallheader]="smallheader"></app-content>
+</ng-container>
