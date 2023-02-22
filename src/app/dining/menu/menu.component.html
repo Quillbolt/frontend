@@ -1,47 +1,124 @@
-<section>
-  <div class="mt-20 text-center bg-white">
-    <div class="flex justify-center items-center">
-        <img src="../../../assets/detourCapture.svg" alt="menu logo">
-      </div>
-    
-    <ul class="bg-primary-200 w-1/2 inline-block">
-      <li class="pt-9 pb-8 text-8xl text-primary-700 font-sans font-bold">Menu</li>
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase text-primary-700">Drinks</li>
-      <li class="pb-20 text-2xl">
-        <ul class="menu" >
-          <li class="py-4 font-sans font-bold text-primary-700 flex">
-            <img src="https://source.unsplash.com/TgQkxQc-t_U/80x80" alt="drinks image" srcset="" class="mx-auto">
-            
-          </li>
-          <li *ngFor="let drink of drinks" class="grid grid-cols-6">
-            <span class="col-start-1 col-span-3 mt-2 text-primary-700">{{drink.name}}</span>. 
-            <span class="col-end-7 col-span-2 text-primary-500">{{drink.price|currency:'USD':'symbol'}}</span></li>
-        </ul>
+<app-hero [background]="resBG" [item]="headImage" [headline]="headline"></app-hero>
+<div class="flex flex-wrap container">
+  <div class="w-full">
+    <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal"
+          (click)="toggleTabs(1)"
+          [ngClass]="{
+            'text-sky-600 bg-white': openTab !== 1,
+            'text-white bg-sky-600': openTab === 1
+          }"
+        >
+          Breakfast
+        </a>
       </li>
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase text-primary-700">Deserts</li>
-      <li class="pb-20 text-2xl">
-        <ul>
-          <li class="py-4 font-sans font-bold text-primary-700 flex">
-            <img src="../../../assets/photo-1606313564200-e75d5e30476c.jfif" alt="deserts image" class="mx-auto">
-            
-          </li>
-          <li *ngFor="let desert of deserts" class="grid grid-cols-6">
-            <span class="col-start-1 col-span-3 mt-2 text-primary-700">{{desert.name}}</span>. 
-            <span class="col-end-7 col-span-2 text-primary-600">{{desert.price|currency:'USD':'symbol'}}</span></li>
-        </ul>
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal"
+          (click)="toggleTabs(2)"
+          [ngClass]="{
+            'text-sky-600 bg-white': openTab !== 2,
+            'text-white bg-sky-600': openTab === 2
+          }"
+        >
+          Lunch
+        </a>
       </li>
-      <li class="pt-10 pb-6 text-5xl tracking-widest uppercase text-primary-700">Light Meal</li>
-      <li class="pb-20 text-2xl">
-        <ul>
-          <li class="py-4 font-sans font-bold text-primary-700 flex">
-            <img src="https://source.unsplash.com/pu6b4yIlQF4/80x80" alt="pu6b4yIlQF4" srcset="" class="mx-auto">
-            </li>
-          <li *ngFor="let light of lights" class="grid grid-cols-6">
-            <span class="col-start-1 col-span-3 mt-2 text-primary-700">{{light.name}}</span>. 
-            <span class="col-end-7 col-span-2 text-primary-600">{{light.price|currency:'USD':'symbol'}}</span></li>
-        </ul>
+      <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
+        <a
+          class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal"
+          (click)="toggleTabs(3)"
+          [ngClass]="{
+            'text-sky-600 bg-white': openTab !== 3,
+            'text-white bg-sky-600': openTab === 3
+          }"
+        >
+          Dinner
+        </a>
       </li>
     </ul>
+    <div
+      class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded"
+    >
+      <div class="px-4 py-5 flex-auto">
+        <div class="tab-content tab-space">
+          <div [ngClass]="{ hidden: openTab !== 1, block: openTab === 1 }">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12"
+            >
+              <div
+                class="bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
+              *ngFor="let item of BreakFast" >
+                <span
+                  class="bg-red-100 border border-red-500 rounded-full text-primary text-sm poppins px-4 py-1 inline-block mb-4"
+                  >Breakfast</span
+                ><img
+                  class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+                  src="{{item.image}}"
+                  alt=""
+                />
+                <div class="flex flex-col items-center my-3 space-y-2">
+                  <h1 class="text-gray-900 poppins text-lg">{{item.name}}</h1>
+                  <p class="text-gray-500 poppins text-sm text-center">
+                    {{item.description}}
+                  </p>
+                  <h2 class="text-gray-900 poppins text-2xl font-bold">
+                    {{item.price| currency:'USD'}}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div [ngClass]="{ hidden: openTab !== 2, block: openTab === 2 }">
+            <div
+            class="bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
+          *ngFor="let item of lunch" >
+            <span
+              class="bg-red-100 border border-red-500 rounded-full text-primary text-sm poppins px-4 py-1 inline-block mb-4"
+              >Lunch</span
+            ><img
+              class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+              src="{{item.image}}"
+              alt=""
+            />
+            <div class="flex flex-col items-center my-3 space-y-2">
+              <h1 class="text-gray-900 poppins text-lg">{{item.name}}</h1>
+              <p class="text-gray-500 poppins text-sm text-center">
+                {{item.description}}
+              </p>
+              <h2 class="text-gray-900 poppins text-2xl font-bold">
+                {{item.price| currency:'USD'}}
+              </h2>
+            </div>
+          </div>
+          </div>
+          <div [ngClass]="{ hidden: openTab !== 3, block: openTab === 3 }">
+            <div
+            class="bg-white border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-4 rounded-lg relative"
+          *ngFor="let item of dinner" >
+            <span
+              class="bg-red-100 border border-red-500 rounded-full text-primary text-sm poppins px-4 py-1 inline-block mb-4"
+              >Dinner</span
+            ><img
+              class="w-64 mx-auto transform transition duration-300 hover:scale-105"
+              src="{{item.image}}"
+              alt=""
+            />
+            <div class="flex flex-col items-center my-3 space-y-2">
+              <h1 class="text-gray-900 poppins text-lg">{{item.name}}</h1>
+              <p class="text-gray-500 poppins text-sm text-center">
+                {{item.description}}
+              </p>
+              <h2 class="text-gray-900 poppins text-2xl font-bold">
+                {{item.price| currency:'USD'}}
+              </h2>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
-
+</div>

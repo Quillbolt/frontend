@@ -13,5 +13,7 @@ export class HeroComponent {
 
   @Input() textdescription : string ='Looking for a fun day out? Visit a water park! This unique experience offers a variety of activities to keep you entertained all day long.'
 
-  @Input() linkage: string ='/about'
+  @Input() linkage: string ='/faq'
+ // OR  bg-gradient-to-r from-sky-500 to-indigo-500
+  @Input() background: string = 'bg-water-texture'
 }

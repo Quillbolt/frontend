@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FooDesert, FooDrink, FooLights } from '../../interfaces/food';
+import { BreakFast, Dinner, Lunch } from '../../interfaces/food';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +7,14 @@ import { FooDesert, FooDrink, FooLights } from '../../interfaces/food';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
- drinks = FooDrink;
- deserts = FooDesert;
- lights = FooLights;
+ BreakFast = BreakFast;
+ lunch = Lunch;
+ dinner = Dinner;
+ resBG = "bg-banner-pattern"
+ headline = "Enjoy fullfilled meals with a variety of food options available"
+ headImage = '../assets/matheus-frade-KO46ZfbNdtY-unsplash.jpg'
+ openTab = 1;
+ toggleTabs($tabNumber: number){
+  this.openTab = $tabNumber;
+}
 }
