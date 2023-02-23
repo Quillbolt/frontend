@@ -12,6 +12,7 @@ module.exports = {
       'restaurant-pattern': "url('src/assets/matheus-frade-KO46ZfbNdtY-unsplash.jpg')",
       'water-texture': "url('src/assets/jong-marshes-79mNMAvSORg-unsplash.jpg')",
       'banner-pattern' : "url('src/assets/bannerbackground.0f3b87c0.png')",
+      
     }
   },
   fontFamily: {

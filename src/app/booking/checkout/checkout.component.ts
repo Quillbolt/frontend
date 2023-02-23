@@ -1,9 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {  Ticket } from '../../interfaces/ticket.interface';
 import { LocalService } from '../../services/local.service';
 
+
+export function dateValidator(): ValidatorFn {
+  return (control: AbstractControl): {[key: string]: any} | null => {
+    const today = new Date().getTime();
+
+    if(!(control && control.value)) {
+      // if there's no control or no value, that's ok
+      return null;
+    }
+
+    // return null if there's no errors
+    return control.value.getTime() > today 
+      ? {invalidDate: 'You cannot use future dates' } 
+      : null;
+  }
+}
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -18,13 +34,13 @@ export class CheckoutComponent implements OnInit {
     Cardnumber: new FormControl(''),
     ExpiryDate: new FormControl(''),
     CVC: new FormControl(''),
-    ZIP: new FormControl('')
+    ZIP: new FormControl(''),
   });
   
   submitted = false;
   Adults: number = 1;
   Child: number = 0;
-  id: number = 0;
+  date: Date = new Date;
   products : Ticket[] = [
     {name:"Adults", prices:39,quantity:1 },
     {name:"Child", prices: 29, quantity:0 }
@@ -58,14 +74,17 @@ export class CheckoutComponent implements OnInit {
     if (this.checkout_form.invalid) {
       return;
     }
-    this.id = this.id + 1;
-    console.log(JSON.stringify(this.checkout_form.value, null, 2));
+    // this.id = this.id + 1;
+    const formValue= (JSON.stringify(this.checkout_form.value, null, 2));
     // console.log(JSON.stringify(this.products,null, 2));
+    const date = JSON.stringify(this.date);
+    let save= formValue.concat(JSON.stringify(this.products));
+    save = save.concat(date);
     
-    const save=JSON.stringify([this.checkout_form.value,this.products]);
     this.localservice.saveData('mydata', save)
     this.router.navigate(['booking','ticket'])
   }
+  
   get total() {
     let Total = 0;
     for (let p of this.products) {

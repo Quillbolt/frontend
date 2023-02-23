@@ -10,7 +10,7 @@ export class HomeComponent {
   textdescription:string = 'Want to eat out but don’t know where to start? Browse our amazing dining options and find one that satisfies your needs!'
   headline:string = 'Where every flavor tells a story'
   image:string ='https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'
-  linkage:string='/menu'
+  linkage:string='menu'
   Events:any = false;
   // content
   ReadMore:boolean = true

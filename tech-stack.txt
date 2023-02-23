@@ -4,10 +4,13 @@ flowbite
 hyper UI
 Mamba UI
 flowrift
-ngxprint
-AOS?
 
+ngxprint package
 
+tailwindcss blog template [https://github.com/davidgrzyb/tailwind-blog-template]
+License MIT
+
+////////////////////////////////
 local storage for ticket bookings 
 angular form validation
 ngxprint for printing ticket

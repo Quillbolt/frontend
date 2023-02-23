@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
+    production: true,
     api_url: 'https://localhost:3000/api',
   
     CACHE_POIS_SECONDS: 60 * 60,
