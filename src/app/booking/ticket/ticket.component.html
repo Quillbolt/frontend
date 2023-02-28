@@ -1,28 +1,117 @@
 <!-- component -->
-<div class="mx-auto bg-gray-700 h-screen flex items-center justify-center px-8" id="print-section">
-    <div class="flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-1/2 lg:w-3/5">
-      <div class="w-full h-64 bg-top bg-cover rounded-t" style="background-image: url(https://www.si.com/.image/t_share/MTY4MTkyMjczODM4OTc0ODQ5/cfp-trophy-deitschjpg.jpg)"></div>
-      <div class="flex flex-col w-full md:flex-row">
-          <div class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
-              <div class="md:text-3xl">{{month}}</div>
-              <div class="md:text-6xl">{{date.getDay()}}</div>
-              
-          </div>
-          <div class="p-4 font-normal text-gray-800 md:w-3/4">
-              <h1 class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800">{{title}}</h1>
-              <p class="leading-normal">{{Description}}</p>
-              <div class="flex flex-row items-center mt-4 text-gray-700">
-                  <div class="w-1/2">
-                      Mercedes-Benz Superdome
-                  </div>
-                  <div class="w-1/2 flex justify-end">
-                      <img src="../../../assets/logo.png" alt="logo" class="w-8">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  </div>
+<!-- component -->
+<style>
+	.barcode {
+		left: 50%;
+		box-shadow: 1px 0 0 1px, 5px 0 0 1px, 10px 0 0 1px, 11px 0 0 1px, 15px 0 0 1px, 18px 0 0 1px, 22px 0 0 1px, 23px 0 0 1px, 26px 0 0 1px, 30px 0 0 1px, 35px 0 0 1px, 37px 0 0 1px, 41px 0 0 1px, 44px 0 0 1px, 47px 0 0 1px, 51px 0 0 1px, 56px 0 0 1px, 59px 0 0 1px, 64px 0 0 1px, 68px 0 0 1px, 72px 0 0 1px, 74px 0 0 1px, 77px 0 0 1px, 81px 0 0 1px, 85px 0 0 1px, 88px 0 0 1px, 92px 0 0 1px, 95px 0 0 1px, 96px 0 0 1px, 97px 0 0 1px, 101px 0 0 1px, 105px 0 0 1px, 109px 0 0 1px, 110px 0 0 1px, 113px 0 0 1px, 116px 0 0 1px, 120px 0 0 1px, 123px 0 0 1px, 127px 0 0 1px, 130px 0 0 1px, 131px 0 0 1px, 134px 0 0 1px, 135px 0 0 1px, 138px 0 0 1px, 141px 0 0 1px, 144px 0 0 1px, 147px 0 0 1px, 148px 0 0 1px, 151px 0 0 1px, 155px 0 0 1px, 158px 0 0 1px, 162px 0 0 1px, 165px 0 0 1px, 168px 0 0 1px, 173px 0 0 1px, 176px 0 0 1px, 177px 0 0 1px, 180px 0 0 1px;
+		display: inline-block;
+		transform: translateX(-90px);
+	}
+</style>
+<div class="flex flex-col items-center justify-center min-h-screen bg-center bg-cover mt-20"
+	style="background-image: url(https://images.unsplash.com/photo-1519666336592-e225a99dcd2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1888&q=80);">
+	<div class="absolute bg-blue-900 opacity-80 inset-0 z-0"></div>
+	<div class="max-w-md w-full h-full mx-auto z-10 bg-blue-900 rounded-3xl">
+		<div class="flex flex-col">
+			<div class="bg-white relative drop-shadow-2xl  rounded-3xl p-4 m-4">
+					<div class="flex-auto justify-evenly">
+						<div class="flex items-center justify-between">
+							<div class="flex items-center  my-1">
+								<span class="mr-3 rounded-full bg-white w-8 h-8">
+    <img src="https://image.winudf.com/v2/image1/Y29tLmJldHMuYWlyaW5kaWEudWlfaWNvbl8xNTU0NTM4MzcxXzA0Mw/icon.png?w=&amp;fakeurl=1" class="h-8 p-1">
+</span>
+								<h2 class="font-medium">Airindia</h2>
+							</div>
+							<div class="ml-auto text-blue-800">A380</div>
+						</div>
+						<div class="border-b border-dashed border-b-2 my-5"></div>
+						<div class="flex items-center">
+							<div class="flex flex-col">
+								<div class="flex-auto text-xs text-gray-400 my-1">
+									<span class="mr-1 ">MO</span><span>19 22</span>
+								</div>
+								<div class="w-full flex-none text-lg text-blue-800 font-bold leading-none">COK</div>
+								<div class="text-xs">Cochi</div>
+
+							</div>
+							<div class="flex flex-col mx-auto">
+								<img src="../../../assets/logo.svg" class="w-20 p-1 fill-red-500">
+
+								</div>
+								<div class="flex flex-col ">
+									<div class="flex-auto text-xs text-gray-400 my-1">
+										<span class="mr-1">MO</span><span>19 22</span>
+									</div>
+									<div class="w-full flex-none text-lg text-blue-800 font-bold leading-none">DXB</div>
+									<div class="text-xs">Dubai</div>
+
+								</div>
+							</div>
+							<div class="border-dashed border-b-2 my-5 pt-5">
+								<div class="absolute rounded-full w-5 h-5 bg-blue-900 -mt-2 -left-2"></div>
+								<div class="absolute rounded-full w-5 h-5 bg-blue-900 -mt-2 -right-2"></div>
+							</div>
+							<div class="flex items-center mb-5 p-5 text-sm">
+								<div class="flex flex-col">
+									<span class="text-sm">Flight</span>
+									<div class="font-semibold">Airbus380</div>
+
+								</div>
+								<div class="flex flex-col ml-auto">
+									<span class="text-sm">Gate</span>
+									<div class="font-semibold">B3</div>
+
+								</div>
+							</div>
+							<div class="flex items-center mb-4 px-5">
+								<div class="flex flex-col text-sm">
+									<span class="">Board</span>
+									<div class="font-semibold">11:50AM</div>
+
+								</div>
+								<div class="flex flex-col mx-auto text-sm">
+									<span class="">Departs</span>
+									<div class="font-semibold">11:30Am</div>
+
+								</div>
+								<div class="flex flex-col text-sm">
+									<span class="">Arrived</span>
+									<div class="font-semibold">2:00PM</div>
+
+								</div>
+							</div>
+							<div class="border-dashed border-b-2 my-5 pt-5">
+								<div class="absolute rounded-full w-5 h-5 bg-blue-900 -mt-2 -left-2"></div>
+								<div class="absolute rounded-full w-5 h-5 bg-blue-900 -mt-2 -right-2"></div>
+							</div>
+							<div class="flex items-center px-5 pt-3 text-sm">
+								<div class="flex flex-col">
+									<span class="">Passanger</span>
+									<div class="font-semibold">Ajimon</div>
+
+								</div>
+								<div class="flex flex-col mx-auto">
+									<span class="">Class</span>
+									<div class="font-semibold">Economic</div>
+
+								</div>
+								<div class="flex flex-col">
+									<span class="">Seat</span>
+									<div class="font-semibold">12 E</div>
+
+								</div>
+							</div>
+							<div class="flex flex-col py-5  justify-center text-sm ">
+								<h6 class="font-bold text-center">Ticket Pass</h6>
+
+								<div class="barcode h-14 w-0 inline-block mt-4 relative left-auto"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+</div>
   <div class="flex bg-red-500 justify-center items-center">
     <button class=""
     

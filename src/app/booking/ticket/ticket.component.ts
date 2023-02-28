@@ -20,7 +20,7 @@ month = this.date.toLocaleString('default', { month: 'long' });
 
   ngOnInit() {
     this.response = JSON.parse(localStorage.getItem('mydata')!);
-
+    console.log(this.response);
     
   }
 }
